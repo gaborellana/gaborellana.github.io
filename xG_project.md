@@ -1,3 +1,8 @@
+layout: page
+title: "PAGE-TITLE"
+permalink: https://gaborellana.github.io/xg
+
+
 # xG project
 
 
