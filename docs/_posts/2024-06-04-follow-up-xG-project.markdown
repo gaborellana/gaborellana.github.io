@@ -247,3 +247,6 @@ The second case is extremely interesting since among the inputs there is no info
 
 
 With respect to the bottom right cases. They all seem to be instances that occur rarely and it could be expected that the training set did not contain enough cases to calibrate the model properly. This is an inherent characteristic of deep learning models and can be addressed by removing rare cases (for instance, by removing categories of a feature with few occurrences, combining them with others), or by increasing the dataset.
+
+
+## Future work

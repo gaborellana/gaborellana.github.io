@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Previous post on expected goals"
+title:  "Initial post on expected goals"
 date:   2024-06-03 10:00:00 -0400
 categories: jekyll update
 ---
