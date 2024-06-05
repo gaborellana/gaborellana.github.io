@@ -61,7 +61,7 @@ Just not goals|0.893|0.837
 
 
 
-### Comparison with StatsBomb's xG
+## Comparison with StatsBomb's xG
 
 We also compared our model's output with StatsBomb's xG measure. We used the same data as in the previous post, i.e. the test subset extracted for the whole dataset.
 
@@ -74,7 +74,7 @@ our XG|0.0727|0.2535|0.8207
 
 These results do not allow to state that one model is better than the other, but they do show that our model is not worse than StatsBomb's xG. We will explore the differences:
 
-#### Distribution of data
+### Distribution of data
 
 ![distribution_all](/images/dist_all_2.png)
 
@@ -82,13 +82,17 @@ These results do not allow to state that one model is better than the other, but
 
 ![distribution_non_goals](/images/dist_nongoals_2.png)
 
+The comparison the of the distribution of the predictions from the two models show some interesting trends:
 
-#### examples
+### 
 
 
-Let's considerer some cases from top left corner of scatter plot:
+### Examples
 
-Goals:
+
+Let's considerer some cases from top left corner of scatter plot, meaning, shots where our model score high and StatsBomb model score low:
+
+#### Goals:
 
 Lyon - Monaco 2015-16\
 StatsBomb xG: 0.60025674\
@@ -97,8 +101,9 @@ our xG: 0.89113533\
 Fifth goal, second half from corner\
 Keeper not in goal, just a defender
 
-![goal_lyon](/images/goal_lyon_monaco.png){:class="img-responsive"}
-
+![goal_lyon](/images/goal_lyon_monaco.PNG){:class="img-responsive"}
+&nbsp;
+&nbsp;
 
 Lazio - Udinese 2015-16\
 StatsBomb xG: 0.3183885\
@@ -107,8 +112,9 @@ our xG: 0.8764055\
 First goal\
 Tap in from a cutback
 
-![goal_lazio](/images/goal_lazio_udinese.png)
-
+![goal_lazio](/images/goal_lazio_udinese.PNG)
+&nbsp;
+&nbsp;
 
 Crystal Palace - Chelsea 2015-16\
 StatsBomb xG: 0.59007293\
@@ -117,8 +123,9 @@ our xG: 0.8907189\
 Third goal by Diego Costa\
 No keeper on goal, just a defender
 
-![goal_chelsea](/images/goal_chelsea_crystal_palace.png)
-
+![goal_chelsea](/images/goal_chelsea_crystal_palace.PNG)
+&nbsp;
+&nbsp;
 
 Arsenal - Watforf 2015/16\
 StatsBomb xG: 0.47959393\
@@ -127,16 +134,19 @@ our xG: 0.9349653\
 Last goal by walcott\
 Tap in from cutback
 
-![goal_arsenal](/images/goal_arsenal_watford.png)
+![goal_arsenal](/images/goal_arsenal_watford.PNG)
+&nbsp;
+&nbsp;
 
-
-Not goals:
+#### Not goals:
 
 Atalanta - Roma 2015/16\
 StatsBomb xG: 0.3948238\
 our xG: 0.8656543\
 (couldn't find video from it)\
 Džeko shot at minute 81
+&nbsp;
+&nbsp;
 
 
 Crystal Palace - Aston Villa 2015/16\
@@ -144,13 +154,16 @@ StatsBomb xG: 0.12405383\
 our xG: 0.86449665\
 (couldn't find video from it)\
 Bakary Sako shot, minute 47
+&nbsp;
+&nbsp;
 
+---
+&nbsp;
+&nbsp;
 
+Let's now consider cases from the bottom right corner, i.e., shots where our model scored low and StatsBomb scored high:
 
-
-Let's now consider cases from the bottom right corner:
-
-Goals:
+#### Goals:
 
 Athletic - Bilbao 2015-16\
 StatsBomb xG: 0.8093721\
@@ -159,8 +172,10 @@ our xG: 0.1830449\
 Third goal from Athletic (3-0)\
 shooter completely alone after offside line push from defense
 
-![goal_athletic](/images/goal_athletic_betis.png)
+![goal_athletic](/images/goal_athletic_betis.PNG)
 
+&nbsp;
+&nbsp;
 
 Manchester City - Stoke City 2015-16\
 StatsBomb xG: 0.92961997\
@@ -169,8 +184,10 @@ our xG: 0.5092157\
 last goal (4-0)\
 forward evades keeper
 
-![goal_mancity](/images/goal_mancity_stoke.png)
+![goal_mancity](/images/goal_mancity_stoke.PNG)
 
+&nbsp;
+&nbsp;
 
 Manchester City - Norwich 2015-16\
 StatsBomb xG: 0.93852484\
@@ -179,8 +196,10 @@ our xG: 0.48162717\
 norwich goal (1-1)\
 keeper losses the ball
 
-![goal_norwich](/images/goal_norwich_mancity.png)
+![goal_norwich](/images/goal_norwich_mancity.PNG)
 
+&nbsp;
+&nbsp;
 
 Carpi - Bologna 2015-16\
 StatsBomb xG: 0.8017068\
@@ -189,5 +208,15 @@ our xG: 0.47479144\
 bologna first goal (1-1)\
 captures rebound from the post\
 
-![goal_bologna](/images/goal_bologna_carpi.png)
+![goal_bologna](/images/goal_bologna_carpi.PNG)
+
+&nbsp;
+&nbsp;
+
+### Discussion
+
+Regarding the top left cases, at least the cases that ended in goals, there seem to follow a clear pattern, where our model scores very high on two play patterns, 1) where the keeper is not in position to protect the goal, but there is a defender that is, and 2) in short range tap-ins from cutbacks.
+
+The first case makes sense given that our architecture extract most of the data to predict a goal or not from the graph embeddings of the shooter and the goalkeeper. If the goalkeeper is not covering the goal, it might generate a big effect.
+The second case is extremely interesting since among the inputs there is no information regarding the kind of pass that preceeded the goal
 
