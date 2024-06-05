@@ -82,10 +82,35 @@ These results do not allow to state that one model is better than the other, but
 
 ![distribution_non_goals](/images/dist_nongoals_2.png)
 
-The comparison the of the distribution of the predictions from the two models show some interesting trends:
+The comparison of the distribution of the predictions from the two models shows some interesting trends:
+- Distributions look very similar.
+- Small differences can be appreciated, with StatsBomb xG score more commonly values between 0 and 0.15 and our model scores more commonly between 0.2 and 0.4.
 
-### 
+### Angle variation evaluation
 
+We intend to measure the effect that the angle of the shot has on the xG. For this, we obtained the xG from shots with only the shooter and the goalkeeper. The keeper is in the middle of the goal and the shot is performed 11 meters away from the goalkeeper. 20 shots are performed in angles from 100° to 260° (from 10° to 170° if considered from the end line), as shown in the following images:
+
+![angle_100](/images/shot_angle_10.png)
+*Shot performed from 100°*
+
+![angle_260](/images/shot_angle_170.png)
+*Shot performed from 260°*
+
+![angle_184](/images/shot_angle_94.png)
+*Shot performed from 184°*
+
+
+The xG from this positions with different body parts hitting the ball can be seen in the following figure:
+![xg_vs_angle](/images/angles_analysis.png)
+
+Some interesting things that can be extracted from this:
+- The xG is not symmetric concerning 180°, meaning that, according to the model, it is more probable to score from the right side of the field (from the goalkeeper's point of view) than from the left side:
+    - The model is trained with the data without any constraint concerning the side where the shot is performed, hence we can assume that this is, approximately, the distribution of goals from each angle. The reason for the asymmetry is probably due to the majority of players being right-footed, therefore having more chance to score from the right side.
+    - The asymmetry may not be a desirable feature, since the model might be intended to be as naive as possible. This can be fixed by reflecting all the positions of the players with respect to a line that goes through 180° (a line from goal to goal) in a way that the shots are always performed from one side of the field.
+- There is no major difference in the shape of plots for the different body parts considered, just in the magnitude. This is particularly the case when comparing right and left feet, where the differences are very small. One might expect shots from the left side of the field to be more precise with the left foot, which is not the case. This can have two explanations for this:
+    - Architectural reason: As mentioned before, global features, such as the body part, are integrated into the data flow at a later stage, and are only processed by linear layers and non-linear activations layers, limiting the ability of the model to capture this phenomena.
+    - Statistical reason: Since the model does not have information about the player performing the shot, it does not also have information on the dominant foot of the player. Therefore, since most players are right-footed, it's possible that many shots taken from the left side with a left foot are performed by a right-footed player.
+- The shape of the plots seems to be smooth, which is a nice property in this kind of function. 
 
 ### Examples
 
@@ -217,6 +242,10 @@ captures rebound from the post\
 
 Regarding the top left cases, at least the cases that ended in goals, there seem to follow a clear pattern, where our model scores very high on two play patterns, 1) where the keeper is not in position to protect the goal, but there is a defender that is, and 2) in short range tap-ins from cutbacks.
 
-The first case makes sense given that our architecture extract most of the data to predict a goal or not from the graph embeddings of the shooter and the goalkeeper. If the goalkeeper is not covering the goal, it might generate a big effect.
-The second case is extremely interesting since among the inputs there is no information regarding the kind of pass that preceeded the goal
+Regarding the top left cases, at least the cases that ended in goals, there seem to follow a clear pattern, where our model scores very high on two play patterns, 1) where the keeper is not in position to protect the goal, but there is a defender that is, and 2) in short range tap-ins from cutbacks.
 
+The first case makes sense given that our architecture extracts most of the data to predict a goal or not from the graph embeddings of the shooter and the goalkeeper. If the goalkeeper is not covering the goal, it might generate a big effect.
+The second case is extremely interesting since among the inputs there is no information regarding the kind of pass that preceded the goal, hence the model is making the decision based only on the positions of the keeper and defenders. A particularity of cutbacks, and why they are so dangerous, is that they generate situations in which the goalkeeper needs to remain close to the goal, ensuring that the eventual shot is very close to the goal but not to the goalkeeper.
+
+
+With respect to the bottom right cases. They all seem to be instances that occur rarely and it could be expected that the training set did not contain enough cases to calibrate the model properly. This is an inherent characteristic of deep learning models and can be addressed by removing rare cases (for instance, by removing categories of a feature with few occurrences, combining them with others), or by increasing the dataset.
