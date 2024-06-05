@@ -96,7 +96,7 @@ Looking at the distribution plots and at the scatter plot with all the shot, we 
 
 Some metrics to measure how well an approximation of a probability function fits the actual data are presented:
 
-**Brier score** is basically an MSE between the output of the function and the real values. It can range between positive infinite and zero, with zero being the ideal. **Area under the curve (AUC)** of a receiver operating characteristic curve (ROC) evaluates how well the output fits real data when several thresholds for classification are tested. Its values range between 0 and 1, being 1 the ideal.
+**Brier score** is basically an MSE between the output of the function and the real values. It can range between positive infinite and zero, with zero being the ideal ([Wikipedia page](https://en.wikipedia.org/wiki/Brier_score)). **Area under the curve (AUC)** of a receiver operating characteristic curve (ROC) evaluates how well the output fits real data when several thresholds for classification are tested. Its values range between 0 and 1, being 1 the ideal ([Wikipedia page](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)).
 
 metric|StatsBomb xG|our XG
 ---|:---:|:---:
