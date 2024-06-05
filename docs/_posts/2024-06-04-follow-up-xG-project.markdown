@@ -90,60 +90,60 @@ Let's considerer some cases from top left corner of scatter plot:
 
 Goals:
 
-1. Lyon - Monaco 2015-16\
+Lyon - Monaco 2015-16\
 StatsBomb xG: 0.60025674\
 our xG: 0.89113533\
 [link](https://www.youtube.com/watch?v=7p2QWIr7bjU)\
 Fifth goal, second half from corner\
-Keeper not in goal, just a defender\
+Keeper not in goal, just a defender
 
-![goal_lyon](/images/goal_lyon_monaco.png)
+![goal_lyon](/images/goal_lyon_monaco.png){:class="img-responsive"}
 
 
-2. Lazio - Udinese 2015-16\
+Lazio - Udinese 2015-16\
 StatsBomb xG: 0.3183885\
 our xG: 0.8764055\
 [link](https://www.youtube.com/watch?v=u3L97sVMy-U)\
 First goal\
-Tap in from a cutback\
+Tap in from a cutback
 
 ![goal_lazio](/images/goal_lazio_udinese.png)
 
 
-3. Crystal Palace - Chelsea 2015-16\
+Crystal Palace - Chelsea 2015-16\
 StatsBomb xG: 0.59007293\
 our xG: 0.8907189\
 [link](https://youtu.be/d14Xk6c_fU8?si=CmuxwdyHR96uqU9i&t=4116)\
 Third goal by Diego Costa\
-No keeper on goal, just a defender\
+No keeper on goal, just a defender
 
 ![goal_chelsea](/images/goal_chelsea_crystal_palace.png)
 
 
-4. Arsenal - Watforf 2015/16\
+Arsenal - Watforf 2015/16\
 StatsBomb xG: 0.47959393\
 our xG: 0.9349653\
 [link](https://www.watfordfc.com/video/match-highlights/highlights-arsenal-4-0-watford-premier-league-201516#play)\
 Last goal by walcott\
-Tap in from cutback\
+Tap in from cutback
 
 ![goal_arsenal](/images/goal_arsenal_watford.png)
 
 
 Not goals:
 
-1. Atalanta - Roma 2015/16\
+Atalanta - Roma 2015/16\
 StatsBomb xG: 0.3948238\
 our xG: 0.8656543\
 (couldn't find video from it)\
-Džeko shot at minute 81\
+Džeko shot at minute 81
 
 
-2. Crystal Palace - Aston Villa 2015/16\
+Crystal Palace - Aston Villa 2015/16\
 StatsBomb xG: 0.12405383\
 our xG: 0.86449665\
 (couldn't find video from it)\
-Bakary Sako shot, minute 47\
+Bakary Sako shot, minute 47
 
 
 
@@ -152,37 +152,37 @@ Let's now consider cases from the bottom right corner:
 
 Goals:
 
-1. Athletic - Bilbao 2015-16\
+Athletic - Bilbao 2015-16\
 StatsBomb xG: 0.8093721\
 our xG: 0.1830449\
 [link](https://www.youtube.com/watch?v=KoqvvIag1Hc)\
 Third goal from Athletic (3-0)\
-shooter completely alone after offside line push from defense\
+shooter completely alone after offside line push from defense
 
 ![goal_athletic](/images/goal_athletic_betis.png)
 
 
-2. Manchester City - Stoke City 2015-16\
+Manchester City - Stoke City 2015-16\
 StatsBomb xG: 0.92961997\
 our xG: 0.5092157\
 [link](https://www.youtube.com/watch?v=keefD2Jzf14&t=621s)\
 last goal (4-0)\
-forward evades keeper\
+forward evades keeper
 
 ![goal_mancity](/images/goal_mancity_stoke.png)
 
 
-3. Manchester City - Norwich 2015-16\
+Manchester City - Norwich 2015-16\
 StatsBomb xG: 0.93852484\
 our xG: 0.48162717\
 [link](https://www.youtube.com/watch?v=3QUu_6XhsTk)\
 norwich goal (1-1)\
-keeper losses the ball\
+keeper losses the ball
 
 ![goal_norwich](/images/goal_norwich_mancity.png)
 
 
-4. Carpi - Bologna 2015-16\
+Carpi - Bologna 2015-16\
 StatsBomb xG: 0.8017068\
 our xG: 0.47479144\
 [link](https://www.youtube.com/watch?v=8ohrJh7A8Vg)\
