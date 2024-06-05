@@ -139,3 +139,43 @@ Bakary Sako shot, minute 47\
 
 
 
+
+Let's now consider cases from the bottom right corner:
+
+Goals:
+
+1. Athletic - Bilbao 2015-16\
+StatsBomb xG: 0.8093721\
+our xG: 0.1830449\
+[link](https://www.youtube.com/watch?v=KoqvvIag1Hc)\
+Third goal from Athletic (3-0)\
+shooter completely alone after offside line push from defense\
+![goal_arsenal](/images/goal_athletic_betis.png)
+
+
+2. Manchester City - Stoke City 2015-16\
+StatsBomb xG: 0.92961997\
+our xG: 0.5092157\
+[link](https://www.youtube.com/watch?v=keefD2Jzf14&t=621s)\
+last goal (4-0)\
+forward evades keeper\
+![goal_arsenal](/images/goal_mancity_stoke.png)
+
+
+3. Manchester City - Norwich 2015-16\
+StatsBomb xG: 0.93852484\
+our xG: 0.48162717\
+[link](https://www.youtube.com/watch?v=3QUu_6XhsTk)\
+norwich goal (1-1)\
+keeper losses the ball\
+![goal_arsenal](/images/goal_norwich_mancity.png)
+
+
+4. Carpi - Bologna 2015-16\
+StatsBomb xG: 0.8017068\
+our xG: 0.47479144\
+[link](https://www.youtube.com/watch?v=8ohrJh7A8Vg)\
+bologna first goal (1-1)\
+captures rebound from the post\
+![goal_arsenal](/images/goal_bologna_carpi.png)
+
