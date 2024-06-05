@@ -74,10 +74,11 @@ We see that both metric align decently well, with many of the top chances accord
 
 We can also calculate the correlation between SBxG and our xG:
 
-metric|All shots|Just goals|Just not goals
----|:---:|:---:|:---: 
-Spearman corr|0.818|0.809|0.793
-Pearson corr|0.768|0.733|0.743
+set|Spearman corr|Pearson corr
+---|:---:|:---:
+All shots|0.818|0.768
+Just goals|0.809|0.733
+Just non goals|0.793|0.743
 
 We can see that our model's xG and the one provided by StatsBomb correlate pretty well, either in the entire dataset or in just the shots that ended up in goals.
 
@@ -98,10 +99,10 @@ Some metrics to measure how well an approximation of a probability function fits
 
 **Brier score** is basically an MSE between the output of the function and the real values. It can range between positive infinite and zero, with zero being the ideal ([Wikipedia page](https://en.wikipedia.org/wiki/Brier_score)). **Area under the curve (AUC)** of a receiver operating characteristic curve (ROC) evaluates how well the output fits real data when several thresholds for classification are tested. Its values range between 0 and 1, being 1 the ideal ([Wikipedia page](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)).
 
-metric|StatsBomb xG|our XG
+model|Brier score|AUC
 ---|:---:|:---:
-Brier score|0.0727|0.0797
-AUC|0.8033|0.7731
+StatsBomb xG|0.0727|0.8033
+our xG|0.0797|0.7731
 
 
 ### Future work

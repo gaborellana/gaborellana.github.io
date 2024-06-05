@@ -72,7 +72,66 @@ model|Brier score|Crossentropy|AUC
 StatsBomb xG|0.0730|0.2561|0.8128
 our XG|0.0727|0.2535|0.8207
 
+These results do not allow to state that one model is better than the other, but they do show that our model is not worse than StatsBomb's xG. We will explore the differences:
 
+#### Distribution of data
+
+![distribution_all]{/images/dist_all_2.png}
+
+![distribution_goals]{/images/dist_goals_2.png}
+
+![distribution_non_goals]{/images/dist_nongoals_2.png}
+
+
+#### examples
+
+
+Let's considerer some cases from top left corner of scatter plot:
+
+Goals:
+
+1. Lyon - Monaco 2015-16
+StatsBomb xG: 0.60025674 
+our xG: 0.89113533
+[link](https://www.youtube.com/watch?v=7p2QWIr7bjU) 
+Fifth goal, second half from corner
+
+
+2. Lazio - Udinese 2015-16
+StatsBomb xG: 0.3183885 
+our xG: 0.8764055
+[link](https://www.youtube.com/watch?v=u3L97sVMy-U)
+First goal
+
+
+3. Crystal Palace - Chelsea 2015-16
+StatsBomb xG: 0.59007293 
+our xG: 0.8907189
+[link](https://youtu.be/d14Xk6c_fU8?si=CmuxwdyHR96uqU9i&t=4116)
+Third goal by Diego Costa
+
+
+4. Arsenal - Watforf 2015/16
+StatsBomb xG: 0.47959393 
+our xG: 0.9349653
+[link](https://www.watfordfc.com/video/match-highlights/highlights-arsenal-4-0-watford-premier-league-201516#play)
+Last goal by walcott
+
+
+Not goals:
+
+1. Atalanta - Roma 2015/16
+StatsBomb xG: 0.3948238 
+our xG: 0.8656543
+(couldn't find video from it)
+Džeko shot at minute 81
+
+
+2. Crystal Palace - Aston Villa 2015/16
+StatsBomb xG: 0.12405383 
+our xG: 0.86449665
+(couldn't find video from it)
+Bakary Sako shot, minute 47
 
 
 
