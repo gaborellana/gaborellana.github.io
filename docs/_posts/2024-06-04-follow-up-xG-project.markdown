@@ -49,7 +49,7 @@ We might integrate them in the future, but we have a few issues with them in the
 
 Results on the test subset can be seen in the following scatter plot.
 
-![correlation]{/images/correlation_xg_2.png}
+![correlation](/images/correlation_xg_2.png){:class="img-responsive"}
 
 As it can be seen, both metrics are heavily correlated. 
 
@@ -76,11 +76,11 @@ These results do not allow to state that one model is better than the other, but
 
 #### Distribution of data
 
-![distribution_all]{/images/dist_all_2.png}
+![distribution_all](/images/dist_all_2.png)
 
-![distribution_goals]{/images/dist_goals_2.png}
+![distribution_goals](/images/dist_goals_2.png)
 
-![distribution_non_goals]{/images/dist_nongoals_2.png}
+![distribution_non_goals](/images/dist_nongoals_2.png)
 
 
 #### examples
@@ -95,7 +95,7 @@ StatsBomb xG: 0.60025674\
 our xG: 0.89113533\
 [link](https://www.youtube.com/watch?v=7p2QWIr7bjU)\
 Fifth goal, second half from corner\
-![goal_lyon]{/images/goal_lyon_monaco.png}
+![goal_lyon](/images/goal_lyon_monaco.png)
 
 
 2. Lazio - Udinese 2015-16\
@@ -103,7 +103,7 @@ StatsBomb xG: 0.3183885\
 our xG: 0.8764055\
 [link](https://www.youtube.com/watch?v=u3L97sVMy-U)\
 First goal\
-![goal_lazio]{/images/goal_lazio_udinese.png}
+![goal_lazio](/images/goal_lazio_udinese.png)
 
 
 3. Crystal Palace - Chelsea 2015-16\
@@ -111,7 +111,7 @@ StatsBomb xG: 0.59007293\
 our xG: 0.8907189\
 [link](https://youtu.be/d14Xk6c_fU8?si=CmuxwdyHR96uqU9i&t=4116)\
 Third goal by Diego Costa\
-![goal_chelsea]{/images/goal_chelsea_crystal_palace.png}
+![goal_chelsea](/images/goal_chelsea_crystal_palace.png)
 
 
 4. Arsenal - Watforf 2015/16\
@@ -119,7 +119,7 @@ StatsBomb xG: 0.47959393\
 our xG: 0.9349653\
 [link](https://www.watfordfc.com/video/match-highlights/highlights-arsenal-4-0-watford-premier-league-201516#play)\
 Last goal by walcott\
-![goal_arsenal]{/images/goal_arsenal_watford.png}
+![goal_arsenal](/images/goal_arsenal_watford.png)
 
 
 Not goals:
