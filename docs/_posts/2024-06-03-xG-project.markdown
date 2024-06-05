@@ -1,6 +1,10 @@
-layout: page
-title: "PAGE-TITLE"
-permalink: https://gaborellana.github.io/xg
+---
+layout: post
+title:  "Previous post on expected goals"
+date:   2024-06-03 10:00:00 -0400
+categories: jekyll update
+---
+This is a re-uploading of a markdown file that I previously uploaded to my github repository [futbol_stuff](https://github.com/gaborellana/futbol_stuff/blob/main/xG_project.md).
 
 
 # xG project
@@ -24,15 +28,15 @@ In this project, I attempt to use the ability of Neural Networks as a universal 
 ### Proof of concept
 
 
-For this PoC we will employ a model based on architecture used in [this paper](https://github.com/jingraham/neurips19-graph-protein-design/), where graph theory is applied to model the geometrical and chemical information of proteins, employing an architecture that falls into the category of Graph Convolutional Neural Networks. The referred model uses as features the positions of amino acids in the space, as well as the angles of its inner bonds, the kind of amino acid, etc. In this project we will adapt this model to work with the shot data, using the positions of the players, among other pieces of information, as the features. Instead of predicting the probabilities of the 20 amino acids in each position of the protein sequences, we will predict whether a goal is scored from the shot.
+For this PoC we will employ a model based on architecture used in [this paper](https://github.com/jingraham/neurips19-graph-protein-design/), where graph theory is applied to model the geometrical and chemical information of proteins, employing an architecture that falls into the category of Graph Convolutional Neural Networks, and more specifically, into the category of Message Passing Neural Networks (MPNN). The referred model uses as features the positions of amino acids in the space, as well as the angles of its inner bonds, the kind of amino acid, etc. In this project we will adapt this model to work with the shot data, using the positions of the players, among other pieces of information, as the features. Instead of predicting the probabilities of the 20 amino acids in each position of the protein sequences, we will predict whether a goal is scored from the shot.
 
 We will use the data from the Ligue 1, season 2015/16. For instance, the first goal that can be found in the dataset is from the game between PSG and Rennes, where Di María scored the only goal. The highlights of the game can be found [here](https://www.youtube.com/watch?v=uUOkoz_6f2Y).
 
-![](gol_dimaria_i=0.PNG)
+![dimaria_gol](/images/gol_dimaria_i=0.PNG){:class="img-responsive"}
 
 A visualization of the positional information present in the database can be seen in the following figure.
 
-![](gol_dimaria_vis.png)
+![Visualization_dimaria_gol](/images/gol_dimaria_vis.png)
 
 On top, StatsBomb calculated xG and the game ID in the database can be seen. On red is the actor, meaning the player executing the shot; on blue is the opposition team; on purple are the actor's teammates; and on yellow is the opposition's goalkeeper. That's all the information we will use for now, although many other features could be employed to further improve the model.
 
@@ -41,7 +45,7 @@ Mathematically, we can define xG as:
 $$xG = P(Goal | S(t_i))$$
 
 
-Where $S(t_i)$ is the state of the field at time $i$. Then, in order to model the state of the field, we use graph theory. 
+Where $$S(t_i)$$ is the state of the field at time $$i$$. Then, in order to model the state of the field, we use graph theory. 
 
 Graphs are mathematical structures employed to model phenomena that present relations between objects. They consist of a set of Nodes (or vertices) and a set of Edges (or arcs or links). For a more detailed, but also accessible, definition of graph theory, see the [Wikipedia page](https://en.wikipedia.org/wiki/Graph_theory).
 
@@ -56,7 +60,7 @@ For Nodes, we use features such as normalized position in the field and type of 
 ### Training
 We divided the Ligue 1 (2015/16) database into training, validation and test sets in a proportion of 0.8, 0.1 and 0.1. The training of the model is displayed in the following image:
 
-![](training_losses.png)
+![Training_losses](/images/training_losses.png)
 
 Here we show the value of the loss function through the training of the model. We can see the values obtained in the training set as well as in the validation set, showcasing that, in fact, the model learns the distribution of goals, and what it learns is generalizable to the validation dataset.
 
@@ -64,7 +68,7 @@ We stop the training when we get the best loss function value for the validation
 
 Furthermore, we evaluate our model using the test dataset, which has not influenced in any way the training of the model or the selection of its parameters and hyperparameters. A natural way to evaluate our model is to compare it to other calculations of xG. StatsBomb open data provides a calculation of xG (SBxG) for each shot, so we use it as a comparison.
 
-![](correlation_xg.png)
+![Correlation](/images/correlation_xg.png)
 
 We see that both metric align decently well, with many of the top chances according to SBxG being also scored highly in our xG.
 
@@ -81,11 +85,11 @@ We can see that our model's xG and the one provided by StatsBomb correlate prett
 
 We could attempt to figure out how the metrics compare to each and which one fits better the data. We can initially see the differences in the probabilty distributions.
 
-![](dist_all.png)
+![Distribution_all_shots](/images/dist_all.png)
 
-![](dist_goals.png)
+![Distribution_goals](/images/dist_goals.png)
 
-![](dist_nongoals.png)
+![Distribution_non_goals](/images/dist_nongoals.png)
 
 
 Looking at the distribution plots and at the scatter plot with all the shot, we can see that our model tends to have lower values of xG in general. An explanation for this could be that our model has awareness of more information, and therefore is more likely to find factors that diminish the value of the xG. This obviously depends on how SBxG is calculated, which is not public domain as far as we are aware.
@@ -115,17 +119,18 @@ There are two main points of future work:
 
 #### Potential applications
 
-As we showed before, we define the state of the field in time $t$ with a graph $G_t$: 
+As we showed before, we define the state of the field in time $$t$$ with a graph $$G_t$$: 
 
-$G_t = \lbrace V_t, E_t\rbrace$, where $V_t=\lbrace V_j  \in  \Re^{f_v}\rbrace$ and $E_t=\lbrace E_{jk}  \in  \Re^{f_e}\rbrace$
+$$G_t = \lbrace V_t, E_t\rbrace$$, 
+where $$V_t=\lbrace V_j  \in  \Re^{f_v}\rbrace$$ and $$E_t=\lbrace E_{jk}  \in  \Re^{f_e}\rbrace$$
 
-With $f_v$ being the size of the vertices features and $f_e$ the size of the edge features.
+With $$f_v$$ being the size of the vertices features and $$f_e$$ the size of the edge features.
 	 
-We previously defined the expected goals $xG$ for a shot that occurs in time $t$. Then we attempt to train a model with an architecture $F$ and learned weights $W$ to approximate the $xG(t)$ function. 
+We previously defined the expected goals $$xG$$ for a shot that occurs in time $$t$$. Then we attempt to train a model with an architecture $$F$$ and learned weights $$W$$ to approximate the $$xG(t)$$ function. 
 
 $$xG(t) =p(Goal|S(t)) \simeq F(w, G_t)$$
 
-Let's assume that we are somewhat successful in training this function (as we have shown previously) and also assume we have access to previous and following states of field in times $t-1$, $t-2$, $t+1$, etc. Let's also define a dangerous shot as any shot with a $xG>threshold$. We now could train the same model in a different task (with the same architecture $F$ and the same representation of State of field at time $t' = G_{t'}$, but different weights $W'$). This time we trained our model on, given a state of the field at time $t$, to predict whether a dangerous shot occurred in the following $k$ times, with $k$ equal to a range from $1$ to $K$.
+Let's assume that we are somewhat successful in training this function (as we have shown previously) and also assume we have access to previous and following states of field in times $$t-1$$, $$t-2$$, $$t+1$$, etc. Let's also define a dangerous shot as any shot with a $$xG>threshold$$. We now could train the same model in a different task (with the same architecture $$F$$ and the same representation of State of field at time $$t' = G_{t'}$$, but different weights $$W'$$). This time we trained our model on, given a state of the field at time $$t$$, to predict whether a dangerous shot occurred in the following $$k$$ times, with $$k$$ equal to a range from $$1$$ to $$K$$.
 
 $$p\Bigl(\sum_{k=1}^K (xG(t+k)>threshold) \big| G_t\Bigr) = F(W', G_t)$$
 
