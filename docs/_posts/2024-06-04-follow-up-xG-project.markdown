@@ -95,6 +95,8 @@ StatsBomb xG: 0.60025674\
 our xG: 0.89113533\
 [link](https://www.youtube.com/watch?v=7p2QWIr7bjU)\
 Fifth goal, second half from corner\
+Keeper not in goal, just a defender\
+
 ![goal_lyon](/images/goal_lyon_monaco.png)
 
 
@@ -103,6 +105,8 @@ StatsBomb xG: 0.3183885\
 our xG: 0.8764055\
 [link](https://www.youtube.com/watch?v=u3L97sVMy-U)\
 First goal\
+Tap in from a cutback\
+
 ![goal_lazio](/images/goal_lazio_udinese.png)
 
 
@@ -111,6 +115,8 @@ StatsBomb xG: 0.59007293\
 our xG: 0.8907189\
 [link](https://youtu.be/d14Xk6c_fU8?si=CmuxwdyHR96uqU9i&t=4116)\
 Third goal by Diego Costa\
+No keeper on goal, just a defender\
+
 ![goal_chelsea](/images/goal_chelsea_crystal_palace.png)
 
 
@@ -119,6 +125,8 @@ StatsBomb xG: 0.47959393\
 our xG: 0.9349653\
 [link](https://www.watfordfc.com/video/match-highlights/highlights-arsenal-4-0-watford-premier-league-201516#play)\
 Last goal by walcott\
+Tap in from cutback\
+
 ![goal_arsenal](/images/goal_arsenal_watford.png)
 
 
@@ -150,7 +158,8 @@ our xG: 0.1830449\
 [link](https://www.youtube.com/watch?v=KoqvvIag1Hc)\
 Third goal from Athletic (3-0)\
 shooter completely alone after offside line push from defense\
-![goal_arsenal](/images/goal_athletic_betis.png)
+
+![goal_athletic](/images/goal_athletic_betis.png)
 
 
 2. Manchester City - Stoke City 2015-16\
@@ -159,7 +168,8 @@ our xG: 0.5092157\
 [link](https://www.youtube.com/watch?v=keefD2Jzf14&t=621s)\
 last goal (4-0)\
 forward evades keeper\
-![goal_arsenal](/images/goal_mancity_stoke.png)
+
+![goal_mancity](/images/goal_mancity_stoke.png)
 
 
 3. Manchester City - Norwich 2015-16\
@@ -168,7 +178,8 @@ our xG: 0.48162717\
 [link](https://www.youtube.com/watch?v=3QUu_6XhsTk)\
 norwich goal (1-1)\
 keeper losses the ball\
-![goal_arsenal](/images/goal_norwich_mancity.png)
+
+![goal_norwich](/images/goal_norwich_mancity.png)
 
 
 4. Carpi - Bologna 2015-16\
@@ -177,5 +188,6 @@ our xG: 0.47479144\
 [link](https://www.youtube.com/watch?v=8ohrJh7A8Vg)\
 bologna first goal (1-1)\
 captures rebound from the post\
-![goal_arsenal](/images/goal_bologna_carpi.png)
+
+![goal_bologna](/images/goal_bologna_carpi.png)
 
