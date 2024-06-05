@@ -242,8 +242,6 @@ captures rebound from the post\
 
 Regarding the top left cases, at least the cases that ended in goals, there seem to follow a clear pattern, where our model scores very high on two play patterns, 1) where the keeper is not in position to protect the goal, but there is a defender that is, and 2) in short range tap-ins from cutbacks.
 
-Regarding the top left cases, at least the cases that ended in goals, there seem to follow a clear pattern, where our model scores very high on two play patterns, 1) where the keeper is not in position to protect the goal, but there is a defender that is, and 2) in short range tap-ins from cutbacks.
-
 The first case makes sense given that our architecture extracts most of the data to predict a goal or not from the graph embeddings of the shooter and the goalkeeper. If the goalkeeper is not covering the goal, it might generate a big effect.
 The second case is extremely interesting since among the inputs there is no information regarding the kind of pass that preceded the goal, hence the model is making the decision based only on the positions of the keeper and defenders. A particularity of cutbacks, and why they are so dangerous, is that they generate situations in which the goalkeeper needs to remain close to the goal, ensuring that the eventual shot is very close to the goal but not to the goalkeeper.
 
