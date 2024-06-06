@@ -251,10 +251,10 @@ With respect to the bottom right cases. They all seem to be instances that occur
 
 ## Future work
 
-- The database used consider only men games. According to analysis [performed by StatsBomb](https://statsbomb.com/articles/soccer/analytics-and-modelling-in-womens-football/), data from both gender can be used to train one model and include the gender as a feature. This is a quick way to increase the dataset.
+- The database used consider only men games. According to an analysis [performed by StatsBomb](https://statsbomb.com/articles/soccer/analytics-and-modelling-in-womens-football/), data from both gender can be used to train one model and include the gender as a feature. This is a quick way to increase the dataset.
 
-- The implementation evaluated here is optimized for xG and would need slight modification (mainly on the last layers) to be used as tactical advantage scoring system.
+- The implementation evaluated here is optimized for xG and would need slight modifications (mainly on the last layers) to be used as tactical advantage scoring system, which is the long term goal of this project.
 
 - A model for direct free kicks could be trained, although probably the current models work as good as possible in that particular department.
 
-- Information about the previous events could be added. In fact, shot events in StatsBomb database have a list related events as well as a reference to the event capturing the key pass that allows the shot, if it there is one.  
+- Information about the previous events could be added. In fact, shot events in StatsBomb database have a list of related events as well as a reference to the event capturing the key pass that allows the shot, if there is one.  
